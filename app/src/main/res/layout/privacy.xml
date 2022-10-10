@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="122dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="510dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/priv_icon" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="401dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="179dp"
+        android:layout_marginTop="133dp"
+        android:layout_marginEnd="174dp"
+        android:layout_marginBottom="358dp"
+        android:autoSizeTextType="uniform"
+        android:text="The Petrol Pal team values and respects every user's
+personal information. We know how important this is to you so we promise never
+to sell or use your sensitive data for any purpose but to better our own application.
+We have received several questions about how the data will be used for good,
+well to be frank, we are going to utilize it to set better filtering systems and
+give us a better perspective of who and where uses our app for more bug fixes if
+need so be. Okay now that the early readers are gone--We are 100% already
+contracted and have a vendor to sell and distribute your personal data with a set
+fee. There is nothing you can do about this if this leaks because this is plainly
+written in our privacy page hahaha! Good luck using this app! Make sure to buy any
+in-app purchases so we can use that information too!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.366" />
+</androidx.constraintlayout.widget.ConstraintLayout>
