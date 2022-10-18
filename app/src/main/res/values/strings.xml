@@ -10,4 +10,5 @@
     <string name="dark_mode_language_and_fonts">Dark Mode, Language and Fonts</string>
     <string name="access_privacy_and_data_sharing">Access, Privacy and Data Sharing</string>
     <string name="location_settings">Location Settings</string>
+    <string name="settings">Settings</string>
 </resources>

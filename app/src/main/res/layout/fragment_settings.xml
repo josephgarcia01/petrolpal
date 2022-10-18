@@ -4,20 +4,16 @@
     android:id="@+id/settings"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Settings"
+    tools:context=".SettingsFragment"
     android:background="#FFFFFF">
 
-
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textView"
         android:layout_width="227dp"
         android:layout_height="52dp"
-        android:layout_above="@+id/button5"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="102dp"
-        android:layout_marginEnd="82dp"
-        android:layout_marginBottom="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="144dp"
         android:background="#FFFFFF"
         android:foregroundTint="#FFFFFF"
         android:text="@string/app_settings"
@@ -26,125 +22,14 @@
         android:textSize="26sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="218dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button3"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginEnd="190dp"
-        android:layout_marginBottom="9dp"
-        android:text="@string/notification_settings"
-        android:textAlignment="viewStart"
-        android:textColor="#E91E63"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="218dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button4"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="192dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/app_apperance"
-        android:textAlignment="viewStart"
-        android:textColor="#E91E63"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
     <Button
-        android:id="@+id/button2"
-        android:onClick="buttonClicked"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="30dp"
-        android:text="@string/sign_out"
-        android:textColor="#FFEB3B"
-        android:textStyle="bold" />
+        android:id="@+id/button7"
+        android:layout_width="122dp"
+        android:layout_height="73dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="@string/settings" />
 
-    <Button
-        android:id="@+id/button3"
-        android:onClick="buttonClicked"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button2"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="121dp"
-        android:text="@string/manage_notifications"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        android:textColor="#FFEB3B"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/button4"
-        android:onClick="buttonClicked"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button3"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginBottom="54dp"
-        android:text="@string/dark_mode_language_and_fonts"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        android:textColor="#FFEB3B"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/button5"
-        android:onClick="buttonClicked"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button4"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="55dp"
-        android:text="@string/access_privacy_and_data_sharing"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        android:textColor="#FFEB3B"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="218dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button5"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="191dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/location_settings"
-        android:textAlignment="viewStart"
-        android:textColor="#E91E63"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="false"
-        android:layout_marginStart="310dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="490dp"
-        android:onClick="buttonClicked"
-        android:text="Sign in"
-        android:textColor="#FFEB3B"
-        android:textStyle="bold" />
 
 </RelativeLayout>

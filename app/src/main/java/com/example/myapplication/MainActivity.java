@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
 
     HomeFragment homeFragment = new HomeFragment();
-    Settings settings = new Settings();
+    SettingsFragment settingsFragment = new SettingsFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
                         return true;
                     case R.id.settings:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container, settings).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, settingsFragment).commit();
                         return true;
 
                 }
@@ -54,9 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                openActivity2();
-            }
+            public void onClick(View view) {openActivity2();}
         });
 
 

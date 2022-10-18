@@ -1,8 +1,9 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,27 +11,31 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 
-public class Settings extends Fragment {
+public class Settings extends AppCompatActivity {
 
-    private Button button1, button2, button3, button4, button5;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_settings, container, false);
-    }
+    protected void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.settings);
 
-    public void buttonClicked(View view) {
+        Button button2 = findViewById(R.id.button2);
+        Button button3 = findViewById(R.id.button3);
+        Button button4 = findViewById(R.id.button4);
+        Button button5 = findViewById(R.id.button5);
+        Button button6 = findViewById(R.id.button6);
 
-        if (view.getId() == R.id.button1) {
-            // button1 action
-        } else if (view.getId() == R.id.button2) {
-            //button2 action
-        } else if (view.getId() == R.id.button3) {
-            //button3 action
+    button5.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            openPrivacy();
         }
+    });
 
+    }
+    public void openPrivacy(){
+        Intent intent = new Intent(this, Privacy.class);
+        startActivity(intent);
     }
 
 }
