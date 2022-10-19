@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Settings"
-    android:background="#FFFFFF">
-
+    tools:context=".setting">
 
     <TextView
         android:id="@+id/textView4"
@@ -15,14 +14,16 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="187dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="4dp"
         android:text="@string/notification_settings"
         android:textAlignment="viewStart"
         android:textColor="#E91E63"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.394" />
 
     <TextView
         android:id="@+id/textView3"
@@ -31,14 +32,16 @@
         android:layout_above="@+id/button4"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="7dp"
-        android:layout_marginEnd="185dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginStart="4dp"
         android:text="@string/app_apperance"
         android:textAlignment="viewStart"
         android:textColor="#E91E63"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.551" />
 
     <Button
         android:id="@+id/button2"
@@ -46,11 +49,14 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="92dp"
         android:text="@string/sign_out"
         android:textColor="#FFEB3B"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
     <Button
         android:id="@+id/button3"
@@ -59,14 +65,17 @@
         android:layout_above="@+id/button2"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="-2dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="222dp"
         android:text="@string/manage_notifications"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textColor="#FFEB3B"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.446" />
 
     <Button
         android:id="@+id/button4"
@@ -75,14 +84,15 @@
         android:layout_above="@+id/button3"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="54dp"
         android:text="@string/dark_mode_language_and_fonts"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textColor="#FFEB3B"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.607" />
 
     <Button
         android:id="@+id/button5"
@@ -91,14 +101,15 @@
         android:layout_above="@+id/button4"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="-1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="63dp"
         android:text="@string/access_privacy_and_data_sharing"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textColor="#FFEB3B"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.279" />
 
     <TextView
         android:id="@+id/textView2"
@@ -107,14 +118,15 @@
         android:layout_above="@+id/button5"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="187dp"
-        android:layout_marginBottom="6dp"
         android:text="@string/location_settings"
         android:textAlignment="viewStart"
         android:textColor="#E91E63"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.232" />
 
     <Button
         android:id="@+id/button6"
@@ -123,11 +135,16 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="false"
-        android:layout_marginStart="310dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="490dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="51dp"
         android:text="Sign in"
         android:textColor="#FFEB3B"
-        android:textStyle="bold" />
-
-</RelativeLayout>
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
