@@ -4,8 +4,7 @@
     android:id="@id/settings"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsFragment"
-    android:background="#FFFFFF">
+    tools:context=".SettingsFragment">
 
     <TextView
         android:id="@+id/textView"
@@ -16,7 +15,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="144dp"
         android:layout_marginBottom="62dp"
-        android:background="#FFFFFF"
         android:foregroundTint="#FFFFFF"
         android:text="@string/app_settings"
         android:textAlignment="center"

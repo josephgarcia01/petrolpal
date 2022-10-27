@@ -30,8 +30,7 @@
         android:id="@+id/textView"
         android:layout_width="401dp"
         android:layout_height="300dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:autoSizeTextType="uniform"
         android:fitsSystemWindows="true"
         android:freezesText="true"
@@ -47,6 +46,8 @@ fee. There is nothing you can do about this if this leaks because this is plainl
 written in our privacy page hahaha! Good luck using this app! Make sure to buy any
 in-app purchases so we can use that information too!"
         android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notification_settings">Notification Settings</string>
+    <string name="app_apperance">App Apperance</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="app_settings">App Settings</string>
+    <string name="manage_notifications">Manage Notifications</string>
+    <string name="dark_mode_language_and_fonts">Dark Mode, Language and Fonts</string>
+    <string name="access_privacy_and_data_sharing">Access, Privacy and Data Sharing</string>
+    <string name="location_settings">Location Settings</string>
+    <string name="settings">Settings</string>
+    <string name="title_activity_fixsetting">fixsetting</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>
