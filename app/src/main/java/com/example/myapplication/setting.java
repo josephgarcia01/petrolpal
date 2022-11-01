@@ -9,22 +9,29 @@ import android.widget.Button;
 
 public class setting extends AppCompatActivity {
 
+    Button logout;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
         getSupportActionBar().setTitle("Settings");
 
-        Button button2 = findViewById(R.id.button2);
+        logout = (Button) findViewById(R.id.button2);
         Button button3 = findViewById(R.id.button3);
         Button button4 = findViewById(R.id.button4);
         Button button5 = findViewById(R.id.button5);
         Button button6 = findViewById(R.id.button6);
 
-        button2.setOnClickListener(new View.OnClickListener() {
+
+
+        logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 openLogout();
+
             }
         });
 
@@ -53,7 +60,7 @@ public class setting extends AppCompatActivity {
         });
     }
     public void openLogout(){
-        Intent intent = new Intent(this, Logout.class);
+        Intent intent = new Intent(this, setting.class);
         startActivity(intent);
     }
     public void openPrivacy(){
