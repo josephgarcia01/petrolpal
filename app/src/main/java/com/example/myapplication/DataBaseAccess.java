@@ -84,9 +84,9 @@ public class DataBaseAccess {
     }
    */
     public String Changetable(String name){
-       // ArrayList<String> newArray= new ArrayList<>();
+        // ArrayList<String> newArray= new ArrayList<>();
 
-        b = db.rawQuery("SELECT Gas_price_0 from'"+name+"'", new String[]{});
+        b = db.rawQuery("SELECT gasPrices_price FROM Mcallen WHERE CityID = '"+name+"'", new String[]{});
         StringBuffer buffer = new StringBuffer();
         while( b.moveToNext()){
             String lul = b.getString(0);
