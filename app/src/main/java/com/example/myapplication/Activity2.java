@@ -56,7 +56,7 @@ public class Activity2 extends AppCompatActivity {
 
                 DataBaseAccess  databaseAccess = DataBaseAccess.getInstance(getApplicationContext());
                 databaseAccess.open();
-                String all = databaseAccess.Changetable(item);
+                //String all = databaseAccess.Changetable(item);
                 //result_address.setText(all);
                 // databaseAccess.close();
 

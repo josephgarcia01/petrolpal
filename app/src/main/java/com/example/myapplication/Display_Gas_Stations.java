@@ -1,8 +1,13 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -10,36 +15,72 @@ import java.util.ArrayList;
 
 public class Display_Gas_Stations extends AppCompatActivity {
     public TextView result;
+    public TextView resultaddress;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_gas_stations);
         Bundle extras = getIntent().getExtras();
         String sessionId = getIntent().getStringExtra("city_key");
-        result=findViewById(R.id.result);
+
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
 
-        ArrayList<String> newArray= new ArrayList<>();
+
+
+
+
+
+
         DataBaseAccess  databaseAccess = DataBaseAccess.getInstance(getApplicationContext());
         databaseAccess.open();
-        //changeTable is the function that returns only the gas prices based on user selection from DatabaseAccess
-        // b = db.rawQuery("SELECT gasPrices_price FROM Mcallen WHERE CityID = '"+name+"'", new String[]{});
-        //can be found in DatabaseAccess
-        String all = databaseAccess.Changetable(sessionId);
-        //trying to split the string bc it contains all gasprices in a single line and variable
-        String[] split = all.split("\\s+");
-
-        //just prints the whole string
-        result.setText(all);
-
-        //newArray.add(split); //this adds an element to the list.
 
 
 
 
+        String[] Gasprices = databaseAccess.ReturnGasPrices(sessionId);
+
+        String[] GasAddress = databaseAccess.ReturnAddress(sessionId);
+
+        String[] GasName = databaseAccess.ReturnName(sessionId);
 
 
+
+        GasData[] GasList = new GasData[]{
+                
+                new GasData(GasName[1], Gasprices[1]),
+                new GasData(GasName[2], Gasprices[2]),
+                new GasData(GasName[3], Gasprices[3]),
+                new GasData(GasName[4], Gasprices[4]),
+                new GasData(GasName[5], Gasprices[5]),
+                new GasData(GasName[6], Gasprices[6]),
+                new GasData(GasName[7], Gasprices[7]),
+                new GasData(GasName[8], Gasprices[8]),
+
+
+
+
+        };
+
+        GasAdapter GasAdapter = new GasAdapter(GasList, Display_Gas_Stations.this);
+        recyclerView.setAdapter(GasAdapter);
+
+    /*
+        recyclerView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+
+                Intent i = new Intent(this, EditNote.class);
+                i.putExtra("listItem", listItems[position]);
+                startActivity(i);
+
+            }
+        });
+        */
 
     }
 }
