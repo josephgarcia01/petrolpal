@@ -96,5 +96,24 @@ public class DataBaseAccess {
 
     }
 
+    public String[] ReturnTotalScore(String name){
+
+        String[] GasTotalScore = new String[25];
+        c = db.rawQuery("SELECT totalScore FROM Mcallen WHERE CityID = '"+name+"'", new String[]{});
+        StringBuffer buffer = new StringBuffer();
+        int a = 0;
+        while( c.moveToNext()){
+            String lul = c.getString(0);
+            GasTotalScore[a] = lul;
+            buffer.append(" "+ lul + "  ");
+            a++;
+
+        }
+        return GasTotalScore;
+
+    }
+
+
+
 
 }
