@@ -3,62 +3,65 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/backgroundColor"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/button"
-        android:layout_width="115dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="147dp"
-        android:layout_marginEnd="149dp"
-        android:layout_marginBottom="178dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginEnd="243dp"
+        android:layout_marginBottom="128dp"
+        android:backgroundTint="#2F5BB1"
         android:text="Find Gas" />
 
     <Button
         android:id="@+id/button11"
-        android:layout_width="wrap_content"
+        android:layout_width="113dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="85dp"
-        android:layout_marginEnd="161dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="128dp"
+        android:backgroundTint="#2F5BB1"
         android:text="sign in" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="207dp"
-        android:layout_height="373dp"
-        android:layout_above="@+id/button"
+        android:layout_width="260dp"
+        android:layout_height="411dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="109dp"
-        android:layout_marginTop="141dp"
-        android:layout_marginEnd="95dp"
-        android:layout_marginBottom="-8dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="68dp"
         app:srcCompat="@drawable/petrolpal_lgo" />
 
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/bottm_navigation" />
+        android:layout_height="wrap_content" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottm_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="57dp"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/bottom_nav_menu" />
-
-
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="181dp"
+        android:layout_marginBottom="125dp"
+        android:background="#00FFFFFF"
+        app:srcCompat="@drawable/ic_baseline_settings_24"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </RelativeLayout>
