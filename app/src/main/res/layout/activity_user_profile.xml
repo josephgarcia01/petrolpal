@@ -4,57 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradientbg3"
-    tools:context=".privy">
-
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="122dp"
-        android:layout_height="125dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginEnd="145dp"
-        android:layout_marginBottom="416dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/priv_icon" />
-
-    <ImageButton
-        android:id="@+id/imagebutton5"
-        android:layout_width="48dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:background="#00FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+    android:background="@drawable/gradientbg2"
+    tools:context=".userProfile">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="401dp"
-        android:layout_height="300dp"
-        android:layout_marginBottom="100dp"
-        android:autoSizeTextType="uniform"
-        android:fitsSystemWindows="true"
-        android:freezesText="true"
-        android:text="The Petrol Pal team values and respects every user's
-personal information. We know how important this is to you so we promise never
-to sell or use your sensitive data for any purpose but to better our own application.
-We have received several questions about how the data will be used for good,
-well to be frank, we are going to utilize it to set better filtering systems and
-give us a better perspective of who and where uses our app for more bug fixes if
-need so be. Okay now that the early readers are gone--We are 100% already
-contracted and have a vendor to sell and distribute your personal data with a set
-fee. There is nothing you can do about this if this leaks because this is plainly
-written in our privacy page hahaha! Good luck using this app! Make sure to buy any
-in-app purchases so we can use that information too!"
-        android:textSize="11sp"
+        android:id="@+id/Welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile - Placeholder"
+        android:textSize="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045" />
 
     <ImageButton
         android:id="@+id/button7"

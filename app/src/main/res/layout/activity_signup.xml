@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradientbg2"
     tools:context=".signup">
 
     <TextView
@@ -17,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.194" />
+        app:layout_constraintVertical_bias="0.112" />
 
     <EditText
         android:id="@+id/username"
@@ -28,16 +29,16 @@
         android:drawableLeft="@drawable/ic_baseline_waving_hand_24"
         android:drawablePadding="20dp"
         android:hint="Username"
+        android:importantForAutofill="no"
+        android:inputType="text"
         android:padding="20dp"
         android:textColorHint="#505050"
-        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.353"
-        android:importantForAutofill="no" />
+        app:layout_constraintVertical_bias="0.248" />
 
     <EditText
         android:id="@+id/password"
@@ -48,12 +49,15 @@
         android:drawableLeft="@drawable/ic_baseline_save_24"
         android:drawablePadding="20dp"
         android:hint="Password"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
         android:padding="20dp"
         android:textColorHint="#505050"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintVertical_bias="0.386" />
 
     <EditText
         android:id="@+id/confpassword"
@@ -71,7 +75,36 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.646" />
+        app:layout_constraintVertical_bias="0.523" />
+
+    <EditText
+        android:id="@+id/cityname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/confpassword"
+        android:background="#81DDDDDD"
+        android:drawableLeft="@drawable/ic_baseline_location_city_24"
+        android:drawablePadding="20dp"
+        android:hint="Enter the name of your city"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textColorHint="#505050"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.656" />
+
+    <ImageButton
+        android:id="@+id/button12"
+        android:layout_width="48dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button10"
@@ -83,5 +116,5 @@
         app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.802" />
+        app:layout_constraintVertical_bias="0.86" />
 </androidx.constraintlayout.widget.ConstraintLayout>

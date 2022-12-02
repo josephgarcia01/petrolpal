@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,6 +17,7 @@ public class Signin extends AppCompatActivity implements View.OnClickListener{
 
     EditText username, password;
     UserDatabase userDatabase;
+    ImageButton button1, button2, button3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +30,53 @@ public class Signin extends AppCompatActivity implements View.OnClickListener{
         TextView accountCreate=(TextView) findViewById(R.id.accountCreate);
         MaterialButton login = (MaterialButton) findViewById(R.id.button9);
         userDatabase = new UserDatabase(this);
-
+        button1 = (ImageButton) findViewById(R.id.imageView3);
+        button2 = (ImageButton) findViewById(R.id.button7);
+        button3 = (ImageButton) findViewById(R.id.imageView4);
         login.setOnClickListener(this);
         accountCreate.setOnClickListener(this);
+
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openProfile();
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSettings();
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMain();
+            }
+        });
+
+
+    }
+
+    public void openProfile(){
+        Intent intent = new Intent(this, userProfile.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.leftslide, R.anim.rightslideout);
+        /*swipe left*/
+
+    }
+    public void openSettings(){
+        Intent intent = new Intent(this, setting.class);
+        startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+
+    }
+    public void openMain(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.leftslide, R.anim.rightslideout);
+        /*swipe left*/
 
     }
 

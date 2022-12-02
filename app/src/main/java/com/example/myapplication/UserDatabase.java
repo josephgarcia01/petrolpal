@@ -17,18 +17,19 @@ public class UserDatabase extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase myDB){
-        myDB.execSQL("create Table users(username TEXT primary key, password TEXT)");
+        myDB.execSQL("create Table users(username TEXT primary key, password TEXT, city TEXT)");
     }
     @Override
     public void onUpgrade(SQLiteDatabase myDB, int i, int j){
         myDB.execSQL("drop Table if exists users");
     }
 
-    public Boolean insertData(String username, String password){
+    public Boolean insertData(String username, String password, String city){
         SQLiteDatabase myDB=this.getWritableDatabase();
         ContentValues contentValues=new ContentValues();
         contentValues.put("username", username);
         contentValues.put("password", password);
+        contentValues.put("city", city);
         long result = myDB.insert("users", null, contentValues);
         if(result==-1) {
             return false;

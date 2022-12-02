@@ -1,17 +1,21 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
+
+import com.google.android.material.switchmaterial.SwitchMaterial;
 
 public class setting extends AppCompatActivity {
 
     Button logout;
-    ImageButton button1;
+    ImageButton button1, button2;
 
 
     @Override
@@ -22,10 +26,12 @@ public class setting extends AppCompatActivity {
 
         logout = (Button) findViewById(R.id.button2);
         button1 = (ImageButton) findViewById(R.id.button12);
+        button2 = (ImageButton) findViewById(R.id.homeicon);
         Button button3 = findViewById(R.id.button3);
-        Button button4 = findViewById(R.id.button4);
         Button button5 = findViewById(R.id.button5);
         Button button6 = findViewById(R.id.button6);
+        SwitchMaterial switchBtn = findViewById(R.id.switchBtn);
+
 
 
 
@@ -45,12 +51,6 @@ public class setting extends AppCompatActivity {
             }
         });
 
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openAppearance();
-            }
-        });
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,30 +65,79 @@ public class setting extends AppCompatActivity {
             @Override
             public void onClick(View view3) {openMain();}
         });
+        button2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view3) {openMain();}
+        });
+
+        switchBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isClicked) {
+                if (isClicked){
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    compoundButton.setText("Night Mode");
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    compoundButton.setText("Light Mode");
+                }
+            }
+        });
+
+        boolean isNightModeOn = AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES;
+        switchBtn.setChecked(isNightModeOn);
+        if (isNightModeOn){
+            switchBtn.setText("Night Mode");
+        } else {
+            switchBtn.setText("Light Mode");
+        }
     }
     public void openLogout(){
         Intent intent = new Intent(this, setting.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.leftslideout, R.anim.rightslide);
+        /*swipe right*/
     }
     public void openPrivacy(){
         Intent intent = new Intent(this, privy.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.leftslideout, R.anim.rightslide);
+        /*swipe right*/
     }
     public void openNotify(){
         Intent intent = new Intent(this, Notify.class);
         startActivity(intent);
-    }
-    public void openAppearance(){
-        Intent intent = new Intent(this, Appearance.class);
-        startActivity(intent);
+        overridePendingTransition(R.anim.leftslideout, R.anim.rightslide);
+        /*swipe right*/
     }
     public void openSignin(){
         Intent intent = new Intent(this, Signin.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.leftslideout, R.anim.rightslide);
+        /*swipe right*/
     }
     public void openMain(){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.leftslide, R.anim.rightslideout);
+        /*swipe left*/
+
+
+    }
+
+    @Override
+    public void recreate(){
+        finish();
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+
+        startActivity(getIntent());
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+    }
+
+    public void openSettings(){
+        Intent intent = new Intent(this, setting.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.leftslide, R.anim.rightslideout);
+        /*swipe left*/
     }
 
 }

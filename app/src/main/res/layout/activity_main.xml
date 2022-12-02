@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradientbg"
     tools:context=".MainActivity">
 
     <Button
@@ -14,8 +15,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="53dp"
-        android:layout_marginEnd="243dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="246dp"
         android:layout_marginBottom="128dp"
         android:backgroundTint="#2F5BB1"
         android:text="Find Gas" />
@@ -27,7 +28,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginEnd="54dp"
+        android:layout_marginEnd="52dp"
         android:layout_marginBottom="128dp"
         android:backgroundTint="#2F5BB1"
         android:text="sign in" />
@@ -40,9 +41,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="84dp"
+        android:layout_marginStart="79dp"
         android:layout_marginTop="67dp"
-        android:layout_marginEnd="68dp"
+        android:layout_marginEnd="73dp"
         app:srcCompat="@drawable/petrolpal_lgo" />
 
     <FrameLayout
@@ -53,15 +54,78 @@
     <ImageButton
         android:id="@+id/button7"
         android:layout_width="wrap_content"
-        android:layout_height="57dp"
+        android:layout_height="56dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginEnd="181dp"
-        android:layout_marginBottom="125dp"
+        android:layout_marginEnd="190dp"
+        android:layout_marginBottom="38dp"
         android:background="#00FFFFFF"
         app:srcCompat="@drawable/ic_baseline_settings_24"
         tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <TextView
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="177dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginBottom="31dp"
+        android:text="Settings" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="53dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="84dp"
+        android:layout_marginEnd="273dp"
+        android:layout_marginBottom="45dp"
+        app:srcCompat="@drawable/ic_baseline_person_outline_24" />
+
+    <TextView
+        android:id="@+id/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="92dp"
+        android:layout_marginEnd="260dp"
+        android:layout_marginBottom="31dp"
+        android:text="Profile" />
+
+    <ImageButton
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="267dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="38dp"
+        android:backgroundTint="#00FFFFFF"
+        app:srcCompat="@drawable/ic_baseline_home_24" />
+
+    <TextView
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="269dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginBottom="30dp"
+        android:text="Home" />
 
 
 </RelativeLayout>

@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setTitle("Petrol App");
+        getSupportActionBar().setTitle("Welcome!");
         button = (Button) findViewById(R.id.button);
         button2 = (Button) findViewById(R.id.button11);
         button3 = (ImageButton) findViewById(R.id.button7);
@@ -48,18 +48,22 @@ public class MainActivity extends AppCompatActivity{
     public void openActivity2(){
         Intent intent = new Intent(this, Activity2.class);
         startActivity(intent);
-
+        overridePendingTransition(R.anim.leftslide, R.anim.rightslideout);
+        /*swipe left*/
     }
 
     public void openLogin(){
         Intent intent = new Intent(this, Signin.class);
         startActivity(intent);
-
+        overridePendingTransition(R.anim.leftslideout, R.anim.rightslide);
+        /*swipe right*/
     }
 
     public void openSettings(){
         Intent intent = new Intent(this, setting.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.leftslideout, R.anim.rightslide);
+        /*swipe right*/
     }
 
 }
