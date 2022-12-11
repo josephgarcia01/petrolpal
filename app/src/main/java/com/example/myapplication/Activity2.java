@@ -21,7 +21,8 @@ public class Activity2 extends AppCompatActivity {
 
 
     //Dropbox
-    String[] cities = {"Edinburg", "Mcallen"};
+    String[] cities = {"Edinburg", "Mcallen", "Harlingen" , "Donna", "Weslaco", "Mission", "Alamo", "Mercedes", "Pharr",
+    "San Juan"};
     AutoCompleteTextView autoCompleteTextView;
     ArrayAdapter<String> adapterItem;
 

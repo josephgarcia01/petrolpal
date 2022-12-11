@@ -47,7 +47,7 @@ public class DataBaseAccess {
     public String[] ReturnGasPrices(String name){
         // ArrayList<String> newArray= new ArrayList<>();
         String[] gasPrices = new String[25];
-        b = db.rawQuery("SELECT gasPrices_price FROM Mcallen WHERE CityID = '"+name+"'", new String[]{});
+        b = db.rawQuery("SELECT regular_price FROM RGV WHERE CityID = '"+name+"'", new String[]{});
         StringBuffer buffer = new StringBuffer();
         int a = 0;
         while( b.moveToNext()){
@@ -64,7 +64,7 @@ public class DataBaseAccess {
     public String[] ReturnAddress(String name){
 
         String[] gasAddress = new String[25];
-        c = db.rawQuery("SELECT address FROM Mcallen WHERE CityID = '"+name+"'", new String[]{});
+        c = db.rawQuery("SELECT address FROM RGV WHERE CityID = '"+name+"'", new String[]{});
         StringBuffer buffer = new StringBuffer();
         int a = 0;
         while( c.moveToNext()){
@@ -82,7 +82,7 @@ public class DataBaseAccess {
     public String[] ReturnName(String name){
 
         String[] gasName = new String[25];
-        c = db.rawQuery("SELECT title FROM Mcallen WHERE CityID = '"+name+"'", new String[]{});
+        c = db.rawQuery("SELECT title FROM RGV WHERE CityID = '"+name+"'", new String[]{});
         StringBuffer buffer = new StringBuffer();
         int a = 0;
         while( c.moveToNext()){
@@ -99,7 +99,7 @@ public class DataBaseAccess {
     public String[] ReturnTotalScore(String name){
 
         String[] GasTotalScore = new String[25];
-        c = db.rawQuery("SELECT totalScore FROM Mcallen WHERE CityID = '"+name+"'", new String[]{});
+        c = db.rawQuery("SELECT totalScore FROM RGV WHERE CityID = '"+name+"'", new String[]{});
         StringBuffer buffer = new StringBuffer();
         int a = 0;
         while( c.moveToNext()){
@@ -113,7 +113,99 @@ public class DataBaseAccess {
 
     }
 
+    public String[] Return_id(String name){
 
+        String[] GasID = new String[25];
+        c = db.rawQuery("SELECT ID_getter FROM RGV WHERE CityID = '"+name+"'" , new String[]{});
+        StringBuffer buffer = new StringBuffer();
+        int a = 0;
+        while( c.moveToNext()){
+            String lul = c.getString(0);
+            GasID[a] = lul;
+            buffer.append(" "+ lul + "  ");
+            a++;
+
+        }
+        return GasID;
+
+    }
+
+
+
+
+
+
+
+    // Display_full_gas information
+    public String Return_D_address(String id_position){
+
+        String ID_city = " ";
+        c = db.rawQuery("SELECT address FROM RGV WHERE ID_getter = '"+id_position+"'" , new String[]{});
+        StringBuffer buffer = new StringBuffer();
+        int a = 0;
+        while( c.moveToNext()){
+            String lul = c.getString(0);
+            ID_city = lul;
+            buffer.append(" "+ lul + "  ");
+            a++;
+
+        }
+        return ID_city;
+
+    }
+
+    public String Return_D_title(String id_position){
+
+        String ID_city = " ";
+        c = db.rawQuery("SELECT title FROM RGV WHERE ID_getter = '"+id_position+"'" , new String[]{});
+        StringBuffer buffer = new StringBuffer();
+        int a = 0;
+        while( c.moveToNext()){
+            String lul = c.getString(0);
+            ID_city = lul;
+            buffer.append(" "+ lul + "  ");
+            a++;
+
+        }
+        return ID_city;
+
+    }
+
+
+
+    public String Return_D_url(String id_position){
+
+        String ID_city = " ";
+        c = db.rawQuery("SELECT url FROM RGV WHERE ID_getter = '"+id_position+"'" , new String[]{});
+        StringBuffer buffer = new StringBuffer();
+        int a = 0;
+        while( c.moveToNext()){
+            String lul = c.getString(0);
+            ID_city = lul;
+            buffer.append(" "+ lul + "  ");
+            a++;
+
+        }
+        return ID_city;
+
+    }
+
+    public String Return_D_regular_price(String id_position){
+
+        String ID_city = " ";
+        c = db.rawQuery("SELECT regular_price FROM RGV WHERE ID_getter = '"+id_position+"'" , new String[]{});
+        StringBuffer buffer = new StringBuffer();
+        int a = 0;
+        while( c.moveToNext()){
+            String lul = c.getString(0);
+            ID_city = lul;
+            buffer.append(" "+ lul + "  ");
+            a++;
+
+        }
+        return ID_city;
+
+    }
 
 
 }
