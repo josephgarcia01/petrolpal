@@ -29,9 +29,9 @@ public class Display_full_Gas_info extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_full_gas_info);
-
+        getSupportActionBar().setTitle("PetrlPal's Finest");
         ImageView imageView = (ImageView) findViewById(R.id.imageView7);
-        imageView.setImageResource(R.drawable.mp2);
+        imageView.setImageResource(R.drawable.gmap);
         imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
 
 

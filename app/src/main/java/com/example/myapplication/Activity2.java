@@ -35,7 +35,7 @@ public class Activity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
-
+        getSupportActionBar().setTitle("Select your city");
 
 
         autoCompleteTextView = findViewById(R.id.auto_complete_text);
@@ -68,6 +68,8 @@ public class Activity2 extends AppCompatActivity {
                 // so that we can use sql functions and retrieve data in Dispaly_gas_stations.java
                 openSetPin.putExtra("city_key", city);
                 startActivity(openSetPin);
+                overridePendingTransition(R.anim.leftslide, R.anim.rightslideout);
+                /*swipe left*/
 
 
 

@@ -78,8 +78,8 @@
         android:layout_marginBottom="31dp"
         android:text="Settings" />
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <ImageButton
+        android:id="@+id/prof"
         android:layout_width="53dp"
         android:layout_height="46dp"
         android:layout_alignParentStart="true"
@@ -88,6 +88,7 @@
         android:layout_marginStart="84dp"
         android:layout_marginEnd="273dp"
         android:layout_marginBottom="45dp"
+        android:backgroundTint="#00FFFFFF"
         app:srcCompat="@drawable/ic_baseline_person_outline_24" />
 
     <TextView

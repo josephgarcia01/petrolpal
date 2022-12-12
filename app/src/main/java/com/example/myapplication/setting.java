@@ -15,7 +15,7 @@ import com.google.android.material.switchmaterial.SwitchMaterial;
 public class setting extends AppCompatActivity {
 
     Button logout;
-    ImageButton button1, button2;
+    ImageButton button1, button2, button4;
 
 
     @Override
@@ -27,6 +27,7 @@ public class setting extends AppCompatActivity {
         logout = (Button) findViewById(R.id.button2);
         button1 = (ImageButton) findViewById(R.id.button12);
         button2 = (ImageButton) findViewById(R.id.homeicon);
+        button4 = (ImageButton) findViewById(R.id.imageView3);
         Button button3 = findViewById(R.id.button3);
         Button button5 = findViewById(R.id.button5);
         Button button6 = findViewById(R.id.button6);
@@ -68,6 +69,11 @@ public class setting extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view3) {openMain();}
+        });
+        button4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view3) {openProfile();}
+
         });
 
         switchBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -120,7 +126,11 @@ public class setting extends AppCompatActivity {
         startActivity(intent);
         overridePendingTransition(R.anim.leftslide, R.anim.rightslideout);
         /*swipe left*/
-
+    }
+    public void openProfile(){
+        Intent intent = new Intent(this, userProfile.class);
+        startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
 
     }
 
@@ -128,7 +138,7 @@ public class setting extends AppCompatActivity {
     public void recreate(){
         finish();
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-
+    /*This refreshes the page when you click Night Mode instead of POPPING... lol*/
         startActivity(getIntent());
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }

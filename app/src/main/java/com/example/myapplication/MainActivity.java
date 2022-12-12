@@ -14,7 +14,7 @@ import android.widget.ImageButton;
 public class MainActivity extends AppCompatActivity{
 
     private Button button, button2;
-    private ImageButton button3;
+    private ImageButton button3, button4;
 
 
     @Override
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity{
         button = (Button) findViewById(R.id.button);
         button2 = (Button) findViewById(R.id.button11);
         button3 = (ImageButton) findViewById(R.id.button7);
+        button4 = (ImageButton) findViewById(R.id.prof);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +43,11 @@ public class MainActivity extends AppCompatActivity{
 
         });
 
+        button4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view3) {openProfile();}
+
+        });
     }
 
 
@@ -66,4 +72,10 @@ public class MainActivity extends AppCompatActivity{
         /*swipe right*/
     }
 
+    public void openProfile(){
+        Intent intent = new Intent(this, userProfile.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.leftslideout, R.anim.rightslide);
+        /*swipe right*/
+    }
 }

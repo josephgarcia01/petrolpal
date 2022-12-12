@@ -15,6 +15,7 @@ public class userProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
+        getSupportActionBar().setTitle("Homebase");
         button1 = (ImageButton) findViewById(R.id.imageView3);
         button2 = (ImageButton) findViewById(R.id.button7);
         button3 = (ImageButton) findViewById(R.id.imageView4);

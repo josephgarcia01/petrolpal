@@ -22,6 +22,7 @@ public class Display_Gas_Stations extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_gas_stations);
+        getSupportActionBar().setTitle("Select your gas station");
         Bundle extras = getIntent().getExtras();
         String sessionId = getIntent().getStringExtra("city_key");
 
@@ -76,6 +77,8 @@ public class Display_Gas_Stations extends AppCompatActivity {
         };
 
 
+        overridePendingTransition(R.anim.leftslide, R.anim.rightslideout);
+        /*swipe left*/
         GasAdapter GasAdapter = new GasAdapter(GasList, Display_Gas_Stations.this);
         recyclerView.setAdapter(GasAdapter);
 

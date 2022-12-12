@@ -34,7 +34,7 @@
                     android:orientation="vertical"
                     android:layout_margin="10dp"
                     android:text="Gas Name"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
                 </TextView>
@@ -42,29 +42,35 @@
                 <TextView
                     android:id="@+id/GasAddress"
                     android:orientation="horizontal"
+                    android:layout_marginLeft="5dp"
                     android:textSize="15sp"
                     android:text="Gas Address"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
                 </TextView>
+
+
                 <TextView
                     android:id="@+id/ShowGasregular"
-                    android:orientation="horizontal"
-                    android:textSize="15sp"
-                    android:text="Regular Price"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:text="Regular Price"
+                    android:textStyle="bold"
+                    android:textSize="15sp">
 
                 </TextView>
 
                 <TextView
                     android:id="@+id/RegularGasPrice"
-                    android:orientation="horizontal"
-                    android:textSize="15sp"
-                    android:text="Gas Regular Price"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:text="Gas Regular Price"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="15sp">
 
                 </TextView>
 
@@ -72,20 +78,31 @@
 
                 <TextView
                     android:id="@+id/totalScoreshow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
                     android:orientation="vertical"
-                    android:textSize="15sp"
                     android:text="Total Score"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:textSize="15sp">
 
                 </TextView>
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="98dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_toRightOf="@+id/totalScoreshow"
+                    android:layout_centerVertical="true"
+                    android:background="#00FFFFFF"
+                    app:srcCompat="@drawable/gaspump" />
 
                 <TextView
                     android:id="@+id/totalScore"
                     android:orientation="vertical"
                     android:textSize="15sp"
                     android:text="totalScore"
-                    android:layout_width="match_parent"
+                    android:layout_marginLeft="134dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent">
 
                 </TextView>

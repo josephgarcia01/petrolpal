@@ -13,9 +13,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 public class GasAdapter extends RecyclerView.Adapter<GasAdapter.ViewHolder> {
     GasData[] GasData;
     Context context;
+
 
 
     public GasAdapter(GasData[] GasData, Display_Gas_Stations display_gas_stations) {
@@ -46,11 +48,13 @@ public class GasAdapter extends RecyclerView.Adapter<GasAdapter.ViewHolder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Toast.makeText(context, GasDataList.getGasName(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(view.getContext(), Display_full_Gas_info.class );
                 intent.putExtra("position", GasDataList.getID_getter());
                 view.getContext().startActivity(intent);
             }
+
         });
 
     }

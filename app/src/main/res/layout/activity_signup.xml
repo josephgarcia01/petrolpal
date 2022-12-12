@@ -87,7 +87,7 @@
         android:drawablePadding="20dp"
         android:hint="Enter the name of your city"
         android:importantForAutofill="no"
-        android:inputType="textPassword"
+        android:inputType="text"
         android:padding="20dp"
         android:textColorHint="#505050"
         app:layout_constraintBottom_toBottomOf="parent"
