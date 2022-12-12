@@ -207,5 +207,74 @@ public class DataBaseAccess {
 
     }
 
+    public String Return_D_phonenumber(String id_position){
+
+        String ID_city = " ";
+        c = db.rawQuery("SELECT phone FROM RGV WHERE ID_getter = '"+id_position+"'" , new String[]{});
+        StringBuffer buffer = new StringBuffer();
+        int a = 0;
+        while( c.moveToNext()){
+            String lul = c.getString(0);
+            ID_city = lul;
+            buffer.append(" "+ lul + "  ");
+            a++;
+
+        }
+        return ID_city;
+
+    }
+
+    public String Return_D_mid_price(String id_position){
+
+        String ID_city = " ";
+        c = db.rawQuery("SELECT midgrade_price FROM RGV WHERE ID_getter = '"+id_position+"'" , new String[]{});
+        StringBuffer buffer = new StringBuffer();
+        int a = 0;
+        while( c.moveToNext()){
+            String lul = c.getString(0);
+            ID_city = lul;
+            buffer.append(" "+ lul + "  ");
+            a++;
+
+        }
+        return ID_city;
+
+    }
+
+
+    public String Return_D_prem_price(String id_position){
+
+        String ID_city = " ";
+        c = db.rawQuery("SELECT premium_price FROM RGV WHERE ID_getter = '"+id_position+"'" , new String[]{});
+        StringBuffer buffer = new StringBuffer();
+        int a = 0;
+        while( c.moveToNext()){
+            String lul = c.getString(0);
+            ID_city = lul;
+            buffer.append(" "+ lul + "  ");
+            a++;
+
+        }
+        return ID_city;
+
+    }
+
+    public String Return_D_diesel_price(String id_position){
+
+        String ID_city = " ";
+        c = db.rawQuery("SELECT diesel_price FROM RGV WHERE ID_getter = '"+id_position+"'" , new String[]{});
+        StringBuffer buffer = new StringBuffer();
+        int a = 0;
+        while( c.moveToNext()){
+            String lul = c.getString(0);
+            ID_city = lul;
+            buffer.append(" "+ lul + "  ");
+            a++;
+
+        }
+        return ID_city;
+
+    }
+
 
 }

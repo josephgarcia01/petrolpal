@@ -11,27 +11,47 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class Display_full_Gas_info extends AppCompatActivity {
     public TextView Address;
     public TextView Title;
     public TextView Regular_price;
+    public TextView phone_number;
+    public TextView midgrade_price;
+    public TextView premium;
+    public TextView diesel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_full_gas_info);
 
-        Button myButton = (Button) findViewById(R.id.button4);
+        ImageView imageView = (ImageView) findViewById(R.id.imageView7);
+        imageView.setImageResource(R.drawable.mp2);
+        imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
 
 
         Address = (TextView)findViewById(R.id.Address);
         Title = (TextView)findViewById(R.id.Title);
         Regular_price = (TextView)findViewById(R.id.regular_price);
+        phone_number = (TextView)findViewById(R.id.phonenumber);
+        midgrade_price = (TextView)findViewById(R.id.midgrade);
+        premium = (TextView)findViewById(R.id.premium);
+        diesel = (TextView)findViewById(R.id.diesel);
+
+
+
+
 
         Bundle extras = getIntent().getExtras();
         //ID
         String id_position = getIntent().getStringExtra("position");
+
+
 
 
 
@@ -49,6 +69,14 @@ public class Display_full_Gas_info extends AppCompatActivity {
 
         String regular_price = databaseAccess.Return_D_regular_price(id_position);
 
+        String phone = databaseAccess.Return_D_phonenumber(id_position);
+
+        String mid_price = databaseAccess.Return_D_mid_price(id_position);
+
+        String premium_price = databaseAccess.Return_D_prem_price(id_position);
+
+        String diesel_price = databaseAccess.Return_D_diesel_price(id_position);
+
 
 
         Address.setText(address);
@@ -57,6 +85,21 @@ public class Display_full_Gas_info extends AppCompatActivity {
         Title.setText(title);
 
         Regular_price.setText(regular_price);
+
+        phone_number.setText(phone);
+
+        midgrade_price.setText(mid_price);
+
+        premium.setText(premium_price);
+
+        diesel.setText(diesel_price);
+
+
+
+
+
+
+
 
 
         Uri mapUri = Uri.parse(url);
@@ -70,7 +113,7 @@ public class Display_full_Gas_info extends AppCompatActivity {
         // Attempt to start an activity that can handle the intent
 
 
-        myButton.setOnClickListener(new View.OnClickListener() {
+        imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
