@@ -17,6 +17,9 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Display_full_Gas_info extends AppCompatActivity {
     public TextView Address;
     public TextView Title;
@@ -43,6 +46,7 @@ public class Display_full_Gas_info extends AppCompatActivity {
         premium = (TextView)findViewById(R.id.premium);
         diesel = (TextView)findViewById(R.id.diesel);
 
+        Button link = (Button) findViewById(R.id.link2);
 
 
 
@@ -77,11 +81,12 @@ public class Display_full_Gas_info extends AppCompatActivity {
 
         String diesel_price = databaseAccess.Return_D_diesel_price(id_position);
 
+        String link_str = databaseAccess.Return_D_link(id_position);
 
 
         Address.setText(address);
 
-       // String Gasprices = databaseAccess.Return_name_id(id_position, name_gas);
+        // String Gasprices = databaseAccess.Return_name_id(id_position, name_gas);
         Title.setText(title);
 
         Regular_price.setText(regular_price);
@@ -97,6 +102,13 @@ public class Display_full_Gas_info extends AppCompatActivity {
 
 
 
+        link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link_str));
+                startActivity(intent);
+            }
+        });
 
 
 
@@ -125,7 +137,11 @@ public class Display_full_Gas_info extends AppCompatActivity {
         //startActivity(mapIntent);
 
 
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/10/yyyy");
+        String currentDate = simpleDateFormat.format(new Date());
 
+        TextView textView = (TextView) findViewById(R.id.lastupdated);
+        textView.setText(currentDate);
 
 
 

@@ -276,5 +276,22 @@ public class DataBaseAccess {
 
     }
 
+    public String Return_D_link(String id_position){
+
+        String ID_city = " ";
+        c = db.rawQuery("SELECT website FROM RGV WHERE ID_getter = '"+id_position+"'" , new String[]{});
+        StringBuffer buffer = new StringBuffer();
+        int a = 0;
+        while( c.moveToNext()){
+            String lul = c.getString(0);
+            ID_city = lul;
+            buffer.append(" "+ lul + "  ");
+            a++;
+
+        }
+        return ID_city;
+
+    }
+
 
 }
