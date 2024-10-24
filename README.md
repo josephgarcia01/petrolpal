@@ -4,5 +4,6 @@ Fortunately, you have your cell phone with you, and remember that you recently d
 which shows the prices of gas at different stations in your area. 
 
 Pictures of final repository loaded up on Android Studio:
+
 ![image](https://github.com/user-attachments/assets/3a646e55-fd0c-4727-bc23-df29261b59b8)
 ![pp_HomeScreen](https://github.com/user-attachments/assets/e70a2c48-2958-4ea2-af15-315b7c422761)
